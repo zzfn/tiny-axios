@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="./js/index.js"></script>
+<script>
+    console.log(window)
+    function ajax(url, method = "GET", data = null, async = true) {
+        // 声明XMLHttpRequest //在IE5和IE6中需要使用ActiveX对象
+        var XHR = XMLHttpRequest;
+        // 创建XMLHttqRequest
+        XHR = new XMLHttpRequest();
+        // 设置请求状态改变时执行的函数
+        XHR.onreadystatechange = function () {
+            if (XHR.readyState === 4) console.log(`响应状态:${XHR.status}`, "FINISH"); //XHR.responseText为响应体
+        };
+        // 初始化请求参数
+        XHR.open(method, url, async);
+        // 发起请求
+        XHR.send(data);
+    }
+
+    ajax("https://www.baidu.com");
+    ajax("https://www.baidu.com", "POST", "A=1&B=2");
+</script>
+</body>
+</html>

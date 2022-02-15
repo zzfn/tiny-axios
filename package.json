@@ -1,0 +1,25 @@
+{
+  "name": "tiny-axios",
+  "version": "1.0.0",
+  "description": "tiny-axios",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js",
+    "server": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzfn/tiny-axios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zzfn/tiny-axios/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/zzfn/tiny-axios#readme",
+  "dependencies": {
+    "esbuild": "^0.14.21"
+  }
+}
